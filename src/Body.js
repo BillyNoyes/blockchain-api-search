@@ -8,6 +8,10 @@ function Body() {
   const [btcBalance, setBtcBalance] = useState("");
   const [btcTransactions, setBtcTransactions] = useState([]);
 
+  useEffect(() => {
+    // setBtcTransactions();
+  }, []);
+
   const searchAddress = (e) => {
     e.preventDefault();
 
@@ -38,7 +42,7 @@ function Body() {
           <p className="body__btcAddress">BTC Address: {btcAddress}</p>
         )}
         {btcBalance && (
-          <p className="body__btcBalance">BTC Balance: {btcBalance}</p>
+          <p className="body__btcBalance">BTC Balance: {btcBalance} BTC</p>
         )}
       </div>
 
@@ -57,8 +61,11 @@ function Body() {
           SEARCH
         </button>
       </form>
-      {btcTransactions.map((btcTransaction) => (
-        <p>Transaction</p>
+      {btcTransactions.map((btcTransaction, index) => (
+        <p key={index} className="body__transaction">
+          <span>Transaction: </span> {btcTransaction.block_height}{" "}
+          {btcTransaction.hash} {btcTransaction.size} {btcTransaction.weight}
+        </p>
       ))}
     </div>
   );
