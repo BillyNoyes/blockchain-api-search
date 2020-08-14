@@ -57,9 +57,9 @@ function Body() {
           SEARCH
         </button>
       </form>
-      {/* {btcTransactions.map((btcTransaction) => (
+      {btcTransactions.map((btcTransaction) => (
         <p>Transaction</p>
-      ))} */}
+      ))}
     </div>
   );
 }
