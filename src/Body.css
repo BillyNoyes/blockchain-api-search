@@ -1,0 +1,48 @@
+.body {
+  height: 100vh;
+  background: #004a7c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.body > img {
+  width: 50%;
+  margin-top: 10%;
+}
+
+.body__displayInfo {
+  padding-top: 10px;
+  color: white;
+}
+
+.body__displayInfo > h2 {
+  font-weight: 200;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.body__displayInfo > p {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.body > form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.body > form > input {
+  position: fixed;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 5%;
+  width: 60%;
+}
+
+.body > form > button {
+  display: none !important;
+}
